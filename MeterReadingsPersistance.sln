@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Meterreadings.WebAPI", "src\MeterReadings.WebAPI\Meterreadings.WebAPI.csproj", "{A0BF5AC5-F8E4-469B-95B4-B2DAAEAB4AFA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeterReadings.Domain", "src\MeterReadingsDomain\MeterReadings.Domain.csproj", "{843264E2-9828-4519-9792-108DAB796D7D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeterReadings.Infrastructure", "src\MeterReadings.Infrastructure\MeterReadings.Infrastructure.csproj", "{FCF3E723-67F7-4A96-A069-6637FC53F845}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeterReadings.Application", "src\MeterReadings.Application\MeterReadings.Application.csproj", "{DC0F44F5-EE5B-47AB-85F8-691A6F814307}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeterReadings.Domain.Tests", "tests\MeterReadings.Domain.Tests\MeterReadings.Domain.Tests.csproj", "{BAE40FA4-06CE-439B-812C-4921438EA4BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeterReadings.Application.Tests", "tests\MeterReadings.Application.Tests\MeterReadings.Application.Tests.csproj", "{D2FD09CD-8B16-4792-A87D-934D5001F8CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0BF5AC5-F8E4-469B-95B4-B2DAAEAB4AFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0BF5AC5-F8E4-469B-95B4-B2DAAEAB4AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0BF5AC5-F8E4-469B-95B4-B2DAAEAB4AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0BF5AC5-F8E4-469B-95B4-B2DAAEAB4AFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{843264E2-9828-4519-9792-108DAB796D7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{843264E2-9828-4519-9792-108DAB796D7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{843264E2-9828-4519-9792-108DAB796D7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{843264E2-9828-4519-9792-108DAB796D7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCF3E723-67F7-4A96-A069-6637FC53F845}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCF3E723-67F7-4A96-A069-6637FC53F845}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCF3E723-67F7-4A96-A069-6637FC53F845}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCF3E723-67F7-4A96-A069-6637FC53F845}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC0F44F5-EE5B-47AB-85F8-691A6F814307}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC0F44F5-EE5B-47AB-85F8-691A6F814307}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC0F44F5-EE5B-47AB-85F8-691A6F814307}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC0F44F5-EE5B-47AB-85F8-691A6F814307}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAE40FA4-06CE-439B-812C-4921438EA4BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAE40FA4-06CE-439B-812C-4921438EA4BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAE40FA4-06CE-439B-812C-4921438EA4BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAE40FA4-06CE-439B-812C-4921438EA4BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2FD09CD-8B16-4792-A87D-934D5001F8CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2FD09CD-8B16-4792-A87D-934D5001F8CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2FD09CD-8B16-4792-A87D-934D5001F8CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2FD09CD-8B16-4792-A87D-934D5001F8CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6849712C-7596-4847-A813-EA8B8E6AA184}
+	EndGlobalSection
+EndGlobal
