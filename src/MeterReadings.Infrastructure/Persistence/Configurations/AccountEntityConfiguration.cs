@@ -8,12 +8,17 @@ public class AccountEntityConfiguration : IEntityTypeConfiguration<AccountEntity
 {
     public void Configure(EntityTypeBuilder<AccountEntity> builder)
     {
-        builder.Property(t => t.FirstName)
+        builder.Property(account => account.Id)
+            .ValueGeneratedOnAdd();
+        
+        builder.Property(account => account.FirstName)
             .HasMaxLength(200)
             .IsRequired();
            
-        builder.Property(t => t.LastName)
+        builder.Property(account => account.LastName)
             .HasMaxLength(200)
             .IsRequired();
+
+        builder.HasKey(account => account.Id);
     }
 }

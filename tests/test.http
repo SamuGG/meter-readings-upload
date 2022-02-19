@@ -1,0 +1,13 @@
+GET http://localhost:5000/meter-reading-downloads
+
+###
+
+POST http://localhost:5000/meter-reading-uploads
+Content-Type: multipart/form-data; boundary=myBoundary
+
+--myBoundary
+Content-Disposition: form-data; name=""; filename="Meter_Reading.csv"
+Content-Type: text/csv
+
+< ../csv/Meter_Reading.csv
+--myBoundary--

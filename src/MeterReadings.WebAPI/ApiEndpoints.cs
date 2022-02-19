@@ -15,35 +15,26 @@ public static class ApiEndpoints
             await mediator.Send(new GetAllMeterReadingsRequest()))
         .Produces<IEnumerable<QueryMeterReadingModel>>();
 
-        builder.MapPost("/meter-reading-uploads", async (IFormFile formFile, IMeterReadingsImportService service, CancellationToken cancellationToken) =>
+        builder.MapPost("/meter-reading-uploads", async (HttpContext httpContext, IMeterReadingsImportService service, CancellationToken cancellationToken) =>
         {
+            if (httpContext.Request.Form.Files.Count != 1)
+                return Results.BadRequest();
+            
             string tempFilename = Path.GetTempFileName();
             await using FileStream stream = new(tempFilename, FileMode.Create);
-            await formFile.OpenReadStream().CopyToAsync(stream, cancellationToken);
+            await httpContext.Request.Form.Files[0].OpenReadStream().CopyToAsync(stream, cancellationToken);
+            await stream.FlushAsync();
 
             var result = await service.ImportAsync(
                 CsvFileReader<MeterReadingModel, MeterReadingModelMap>.ReadAll(tempFilename),
                 cancellationToken);
 
             File.Delete(tempFilename);
-            return result;
+            return Results.Ok(result);
         })
         .Accepts<IFormFile>("multipart/form-data")
-        .Produces<Application.MeterReadings.ImportServiceResult>();
-
-        // Uncomment alternative endpoint version if uploading the file fails
-        //builder.MapPost("/meter-reading-uploads", async (IMeterReadingsImportService service, CancellationToken cancellationToken) =>
-        //{
-        //    string tempFilename = "..\\..\\csv\\Meter_Reading.csv";
-
-        //    var result = await service.ImportAsync(
-        //        CsvFileReader<MeterReadingModel, MeterReadingModelMap>.ReadAll(tempFilename),
-        //        cancellationToken);
-
-        //    return result;
-        //})
-        //.Accepts<IFormFile>("multipart/form-data")
-        //.Produces<Application.MeterReadings.ImportServiceResult>();
+        .Produces<Application.MeterReadings.ImportServiceResult>()
+        .ProducesProblem(StatusCodes.Status400BadRequest);
 
         return builder;
     }

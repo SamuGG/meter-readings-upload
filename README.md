@@ -1,12 +1,12 @@
 ## The Task
 
-Ensuring tha acceptance criteria are met, build a C# Web API that connect to an instance of a database and persists the contents of the merter reading CSV file.
+Ensuring tha acceptance criteria are met, build a C# Web API that connects to an instance of a database and persists the contents of the meter reading CSV file.
 
 Please seed the accounts data into your chosen data storage technology and validate meter read data against the accounts.
 
 ## User Story
 
-As an energy company account manager, I want to be able to load a CSV file of customer meter readings so tat we can monitor their energy consumption and charge them accordingly.
+As an energy company account manager, I want to be able to load a CSV file of customer meter readings so that we can monitor their energy consumption and charge them accordingly.
 
 ## Acceptance Criteria
 
@@ -30,4 +30,4 @@ Nice to Have
 
 [Meter_reading.csv](csv/Meter_reading.csv)
 
-[Test_accounts](csv/Test_accounts.csv) contains a list of test customers along with their respective account IDs
+[Test_accounts](csv/Test_accounts.csv)
